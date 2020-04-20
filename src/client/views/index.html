@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone - Travel App</title>
+</head>
+<body>
+    <div id="white"></div>
+    <h1>Travel Planner</h1>
+    <header>
+        <h6>My Trip:</h6>
+        <!--input id="addTrip" type="button" value="+ add trip"-->
+    </header>
+    <div id="description">
+        <h3>Enter a new trip now, what are you waiting for?</h3>
+        <h4>Enjoy ;)</h4>
+    </div>
+    <div id="loading">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <g transform="translate(50,50)"><circle cx="0" cy="0" r="10" fill="none" stroke="#d74946" stroke-width="4" stroke-dasharray="31.41592653589793 31.41592653589793">
+            <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="0" repeatCount="indefinite"></animateTransform>
+            </circle><circle cx="0" cy="0" r="20" fill="none" stroke="#00ce63" stroke-width="4" stroke-dasharray="62.83185307179586 62.83185307179586">
+            <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.25" repeatCount="indefinite"></animateTransform>
+            </circle><circle cx="0" cy="0" r="30" fill="none" stroke="#f0af31" stroke-width="4" stroke-dasharray="94.24777960769379 94.24777960769379">
+            <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.5" repeatCount="indefinite"></animateTransform>
+            </circle><circle cx="0" cy="0" r="40" fill="none" stroke="#4db5ff" stroke-width="4" stroke-dasharray="125.66370614359172 125.66370614359172">
+            <animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" times="0;1" dur="1s" calcMode="spline" keySplines="0.2 0 0.8 1" begin="-0.75" repeatCount="indefinite"></animateTransform>
+            </circle></g>
+            </svg>
+    </div>
+    <section id="result">
+        <div id="city-description">
+            <img id="picture" src="">
+        </div>
+        <div id="city-data">
+            <div id="location"></div>
+            <div id="weather"></div>
+        </div>
+    </section>
+    <form autocomplete="off">
+        <div id="place-dev">
+            <label for="place">My trip to:</label>
+            <input id="place" type="text" placeholder="Enter Location" value="">
+        </div>
+        <dev id="btn">
+            <input id="submit" type="submit" value="Set trip">
+        </dev>
+    </form>
+    <div id="alert">Please, enter a location</div>
+</body>
+</html>

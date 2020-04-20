@@ -1,0 +1,176 @@
+$bodyBackground-color: #fff;
+$formBackground-color: #e4e2e2;
+$resultBackground-color: #ffedee;
+$descriptionColor: #999;
+$placeColor: #777;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#white {
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    display: 'block'
+}
+
+body {
+    background-color: $bodyBackground-color;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 4vw;
+    font-family: 'montserrat';
+    margin: 4vh 2vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    h6 {
+        font-size: 1.5vw;
+        font-family: 'amiri';
+        margin: 2vh 4vw;
+    }
+}
+
+#addTrip {
+    width: 7vw;
+    height: 5vh;
+    font-size: 1.4vw;
+    font-family: 'amiri';
+    margin: 0 4vh;
+    background: transparent;
+    border: 2px solid #888;
+    border-radius: 30px;
+}
+
+#description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    opacity: 1;
+    transition: 1s;
+    h3 {
+        color: $descriptionColor;
+        font-size: 3vw;
+    }
+    h4 {
+        color: $descriptionColor;
+        font-size: 1.5vw;
+    }
+}
+
+
+#place-dev {
+    font-size: 2vw;
+    font-family: 'amiri'
+}
+
+#place {
+    width: 15vw;
+    color: #777;
+    background: transparent;
+    border: none;
+    text-decoration: underline #fff;
+    font-size: 2vw;
+    font-family: 'amiri';
+    transition: 1s;
+    &::selection {
+        background-color: $resultBackground-color;
+        color: #000
+    }
+}
+
+#submit {
+    background-color: #fff;
+    width: 7vw;
+    height: 5vh;
+    font-size: 1.4vw;
+    font-family: 'amiri';
+    border: 2px solid #000;
+    margin: 2vh;
+    transition: 1s;
+    &:hover {
+       background-color: $resultBackground-color;
+       border-color: $resultBackground-color;
+    }
+    &:active {
+        transition: none;
+        background-color: #000;
+        border-color: $resultBackground-color;
+        color: $resultBackground-color;
+    }
+}
+
+#result {
+    background-color: $resultBackground-color;
+    width: 100%;
+    height: 56vh;
+    opacity: 0;
+    transition: 1s;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5vw;
+    #city-description {
+        img {
+            width: auto;
+            height: 49.5vh;
+        }
+    }
+    #city-data {
+        margin-left: 2vw;
+        padding: 0.5vw;
+        font-size: 2vw;
+        font-family: 'amiri';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#alert {
+    position: fixed;
+    top: 5vw;
+    color: #fff;
+    background: red;
+    padding: 1vw;
+    border-radius: 20px;
+    left: calc(50% - 15vw /2);
+    width: 15vw;
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+}
+
+form {
+    width: 100%;
+    height: 20vh;
+    border-top: 5px solid #fff;
+    background-color: $formBackground-color;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loading {
+    width: 10vw;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    top: 40vh;
+    left: calc(50% - 10vw / 2);
+    transition: 1s;
+}
